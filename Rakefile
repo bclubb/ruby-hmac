@@ -3,7 +3,7 @@ require 'hoe'
 $:.unshift(File.dirname(__FILE__) + "/lib")
 require 'hmac'
 
-Hoe.new('ruby-hmac', HMAC::VERSION) do |p|
+Hoe.spec('ruby-hmac') do |p|
   p.name = "ruby-hmac"
   p.author = ["Daiki Ueno", "Geoffrey Grosenbach"]
   p.email = 'boss@topfunky.com'
