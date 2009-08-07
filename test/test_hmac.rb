@@ -7,7 +7,18 @@ require 'hmac-sha1'
 
 class TestHMAC < Test::Unit::TestCase
 
+  def test_sha1_digest
+    key = "\x0b" * 16
+    text = "Hi There"
+    hmac = HMAC::SHA1.new(key)
+    hmac.update(text)
+
+    assert_equal(hmac.digest, HMAC::SHA1.digest(key, text))
+  end
+  
+
   def test_s_digest
+    
     key = "\x0b" * 16
     text = "Hi There"
 
